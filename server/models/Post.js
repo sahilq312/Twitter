@@ -13,11 +13,8 @@ const PostSchema = new mongoose.Schema({
     image:{
         type: String,
         default: ''
-    },
-    likes: {
-        type: String,
-        default: []
     }
+
 })
 const Post = mongoose.model("post", PostSchema);
 
