@@ -16,4 +16,10 @@ postController.post("/createpost", async(req,res)=>{
       console.error('Error saving post:', error);
     });
 })
+
+postController.delete("/deletepost",( req,res)=>{
+  
+})
+
+
 export default postController;
