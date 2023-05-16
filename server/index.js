@@ -2,6 +2,7 @@ import 'dotenv/config'
 import express from "express";
 import mongoose from 'mongoose';
 import authController from "./controllers/Auth.js"
+import postController from './controllers/Post.js';
 
 
 const app = express();
@@ -13,6 +14,7 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
 
 
 app.use("/auth", authController)
+app.use("/post", postController)
 
 app.listen(process.env.PORT, ()=>{
     console.log("App is running");
