@@ -1,16 +1,16 @@
 import express from "express";
 const userController = express.Router();
 import User from "../models/User.js";
-import authController from "./Auth.js";
 
-
-authController.delete("/delete/:id", (req,res)=>{
-
+userController.delete("/:id", (req,res)=>{
+   const userID = req.params.id;
+   User.findByIdAndDelete(userID).then((err) => {
+    //console.log("result")
+    if (err) {
+      res.json(err)
+    }else{
+    res.status(200).json({message:"deleted"})}
 })
-
-
-authController.put("/update", (req,res)=>{
-    
 })
 
 export default userController;

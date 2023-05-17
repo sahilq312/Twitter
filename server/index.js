@@ -3,6 +3,7 @@ import express from "express";
 import mongoose from 'mongoose';
 import authController from "./controllers/Auth.js"
 import postController from './controllers/Post.js';
+import userController from './controllers/User.js';
 
 
 const app = express();
@@ -15,6 +16,7 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopol
 
 app.use("/auth", authController)
 app.use("/post", postController)
+app.use("/user", userController)
 
 app.listen(process.env.PORT, ()=>{
     console.log("App is running");
