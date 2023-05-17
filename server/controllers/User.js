@@ -4,7 +4,7 @@ import User from "../models/User.js";
 import authController from "./Auth.js";
 
 
-authController.delete("/delete", (req,res)=>{
+authController.delete("/delete/:id", (req,res)=>{
 
 })
 
