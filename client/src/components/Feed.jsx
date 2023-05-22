@@ -36,7 +36,7 @@ const Feed = () => {
 
 
   return (
-    <div className='z-2 border border-slate-500 w-screen lg:w-5/12  '>
+    <>
     <Header/>
 
     <Create/>
@@ -44,7 +44,7 @@ const Feed = () => {
     {posts?.map((post) => (
             <Post className="overflow-y-scroll" post={post} key={post._id}/>
           ))}
-    </div>
+          </>
   )
 }
 

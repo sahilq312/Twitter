@@ -1,4 +1,6 @@
 import React from 'react';
+import {AiOutlineHeart} from "react-icons/ai"
+import {FcLike} from "react-icons/fc"
 
 const Post = () => {
   return (
@@ -27,9 +29,11 @@ const Post = () => {
         alt=""
       />
       <div className="flex items-center justify-between mt-4">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <AiOutlineHeart/>
+        <FcLike/>
+        {/*<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
           Like
-        </button>
+  </button>*/}
         <div>
           <button className="text-gray-600 hover:text-blue-500 mr-2">
             <svg
